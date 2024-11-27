@@ -1,0 +1,131 @@
+.newsletterContainer {
+  background-color: hsl(0, 0%, 100%);
+  width: 100vw;
+  height: 100%;
+
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    width: 100%;
+  }
+
+  .contentContainer {
+    .content {
+      padding: 0 20px;
+
+      .title {
+        font-size: 35px;
+        color: hsl(234, 29%, 20%);
+      }
+      
+      .description {
+        font-size: 16px;
+      }
+      
+      .listItems {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .listItem {
+          display: flex;
+          align-items: start;
+          column-gap: 15px;
+        }
+      }
+    }
+
+    .inputContainer {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      .labelErrorWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .label {
+          font-weight: 700;
+        }
+
+        .error {
+          font-weight: 700;
+          color: hsl(0, 100%, 50%);
+          margin: 0;
+        }
+      }
+
+      .input {
+        padding: 15px 20px;
+        border: 1px solid hsl(231, 7%, 60%);
+        border-radius: 10px;
+        outline: none;
+
+        &.inputError {
+          border-color: hsl(0, 100%, 50%);
+          background-color: hsl(0, 100%, 95%);
+        }
+      
+        &:focus {
+          outline: none;
+          border: 1px solid hsl(0, 0%, 0%);
+        }
+      }
+
+      .subscribe {
+        background-color: hsl(235, 18%, 26%);
+        color: hsl(0, 0%, 100%);
+        padding: 17px 20px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+      
+        &:hover {
+          background: linear-gradient(45deg, rgb(255, 83, 123), hsl(4, 100%, 67%));
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .newsletterContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px;
+    width: 60vw;
+    height: auto;
+    border-radius: 20px;
+
+    .mobile {
+      display: none;
+    }
+  
+    .desktop {
+      display: block;
+      width: 45%;
+      height: auto;
+    }
+
+    .contentContainer {
+      width: 50%;
+      align-self: center;
+
+      .inputContainer {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
+}
