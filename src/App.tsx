@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NewsletterForm } from "./components/NewsletterForm/NewsletterForm";
 import { SuccessMessage } from "./components/SuccessMessage/SuccessMessage";
+import { Footer } from "./components/Footer/Footer";
 import styles from "./App.module.scss";
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
           )}
         </section>
       </main>
+      <footer className={styles.Footer} aria-label="Footer">
+        <Footer />
+      </footer>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.attribution {
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  
+  .link {
+    color: hsl(0, 0%, 100%);
+    margin-left: 5px;
+    cursor: pointer;
+
+    &:hover {
+      color: hsl(4, 100%, 67%);
+    }
+  }
+}
